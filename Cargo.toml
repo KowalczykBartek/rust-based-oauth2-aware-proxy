@@ -1,0 +1,20 @@
+[package]
+name = "auth-enrichment-proxy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pingora = { version = "0.4.0", features = ["lb", "openssl", "proxy", "cache"] }
+pingora-cache = "0.4.0"
+reqwest = { version = "0.12.8", features = ["json", "rustls-tls"] }
+prometheus = "0.13.4"
+async-trait = "0.1.83"
+env_logger = "0.11.5"
+log = "0.4.22"
+clap = { version = "3.2.25", features = ["derive", "cargo"] }
+tokio = { version = "1.41.1", features = ["sync", "rt-multi-thread", "fs"] }
+serde = "1.0.215"
+serde_json = "1.0.133"
+config = "0.14.0"
+bytes = "1.9.0"
+serde_yaml = "0.9.34"

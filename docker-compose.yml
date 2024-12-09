@@ -1,0 +1,9 @@
+services:
+  app:
+    image: urimage:10
+    volumes:
+      - /tmp/proxyconfig/config.yaml:/tmp/proxyconfig/config.yaml
+      - /tmp/proxyconfig/cert.pem:/tmp/proxyconfig/cert.pem
+      - /tmp/proxyconfig/key.pem:/tmp/proxyconfig/key.pem
+    environment:
+      RUST_LOG: "trace"
